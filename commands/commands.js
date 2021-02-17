@@ -18,7 +18,7 @@ module.exports = {
       {name: 'Test (for K4 only)', value: '$test'},
     ) 
     .setImage('https://i.imgur.com/ZXZMa3f.png')
-    .setFooter('Bot made by Harrison for the K4 boys :)')
+    .setFooter('Bot made by Harrison for the K4 boys')
 
     message.channel.send(newEmbed)
   }
