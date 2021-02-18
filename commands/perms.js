@@ -1,7 +1,7 @@
 module.exports = {
   name: 'perms',
   description: "this is a check permissions command.",
-  execute(client, message, args) {
+  execute(message, args, cmd, client, Discord) {
     
     if (message.member.permissions.has("ADMINISTRATOR")) {
       admin = 'You have the admin role. '
