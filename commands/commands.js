@@ -12,7 +12,7 @@ module.exports = {
       {name: 'Skip music', value: '$skip, $s'},
       {name: 'Stop music/bot leaves', value: '$stop'},
       {name: 'Check your permissions (works, but not the best looking)', value: '$permissions, $perms'},
-      {name: 'Purge (for admins only, you cannot delete messages that are older than 14 days)', value: '$purge [number]'},
+      {name: 'Purge (for admins only, you cannot delete messages that are older than 14 days).', value: '$purge [number]'},
       {name: 'Look at your own vatar/profile pic', value: '$avatar, $profilepic, $pfp, $icon'},
       {name: 'Weather', value: '$weather [location]'},
       {name: 'Test (for K4 only)', value: '$test'},
