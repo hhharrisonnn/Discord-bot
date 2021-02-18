@@ -8,10 +8,10 @@ module.exports = {
     .setTitle('Commands')
     .addFields(
       {name: 'Commands', value: '$commands, $c'},
-      {name: 'Play music', value: '$play, $p [keywords or URL]'},
-      {name: 'Skip music', value: '$skip, $s'},
+      {name: 'Play music', value: '$play [keywords or URL]'},
+      {name: 'Skip music', value: '$skip'},
       {name: 'Music bot leaves', value: '$leave'},
-      {name: 'Check your permissions (works, but not the best looking)', value: '$permissions, $perms'},
+      {name: 'Check your permissions (works, but not the best looking, fixing soon)', value: '$permissions, $perms'},
       {name: 'Purge (for admins only, you cannot delete messages that are older than 14 days).', value: '$purge [number]'},
       {name: 'Look at your own vatar/profile pic', value: '$avatar, $profilepic, $pfp, $icon'},
       {name: 'Weather', value: '$weather [location]'},
