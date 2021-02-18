@@ -9,12 +9,12 @@ module.exports = {
       admin = ''
     }
     if (message.member.permissions.has("KICK_MEMBERS")) {
-      kick = 'You have the permission to kick memebers. '
+      kick = 'You have the permission to kick members. '
     } else {
       kick = ''
     }
     if (message.member.permissions.has("BAN_MEMBERS")) {
-      ban = 'You have the permission to ban memebers. '
+      ban = 'You have the permission to ban members. '
     } else {
       ban = ''
     }
