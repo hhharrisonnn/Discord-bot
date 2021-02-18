@@ -3,7 +3,7 @@ module.exports = {
   aliases: ['icon', 'pfp', 'profilepic'],
   description: 'Return a user(s) avatar picture!',
   aliases: ['icon', 'pfp', 'profilepic'],
-  execute(client, message, cmd, args) {
+  execute(message, args, cmd, client, Discord) {
 
       if (!message.mentions.users.size) {
           return message.channel.send(`**Your Avatar: ** ${message.author.displayAvatarURL({ dynamic: true })}`);
