@@ -3,7 +3,8 @@ module.exports = () => {
   client.user.setPresence ({
     status: "online", 
     game: {
-      name: "sucking fat cock"
+      name: "with fat cock",
+      type: "Playing"
     }
   });
 }
