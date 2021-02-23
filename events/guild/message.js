@@ -1,4 +1,4 @@
-//require('dotenv').config();
+require('dotenv').config();
 const profileModel = require('../../models/profileSchema');
 
 module.exports = async (Discord, client, message) => {
@@ -26,5 +26,10 @@ module.exports = async (Discord, client, message) => {
 
   const command = client.commands.get(cmd) || client.commands.find(a => a.aliases && a.aliases.includes(cmd));
 
-  if(command) command.execute(message, args, cmd, client, Discord, profileData);
-}
+  try {
+    command.execute(message, args, cmd, client, Discord, profileData);
+  } catch(err) {
+    message.reply("There was an error executing this command.");
+    console.log(err);
+  }
+};
