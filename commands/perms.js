@@ -4,44 +4,44 @@ module.exports = {
   execute(message, args, cmd, client, Discord) {
     
     if (message.member.permissions.has("ADMINISTRATOR")) {
-      admin = 'You have the admin role. '
+      var admin = 'Yes'
     } else {
-      admin = ''
+      var admin = 'No'
     }
     if (message.member.permissions.has("KICK_MEMBERS")) {
-      kick = 'You have the permission to kick members. '
+      var kick = 'Yes'
     } else {
-      kick = ''
+      var kick = 'No'
     }
     if (message.member.permissions.has("BAN_MEMBERS")) {
-      ban = 'You have the permission to ban members. '
+      var ban = 'Yes'
     } else {
-      ban = ''
+      var ban = 'No'
     }
     if (message.member.permissions.has("MANAGE_CHANNELS")) {
-      manage_channels = 'You have the permission to manage channels. '
+      var manage_channels = 'Yes'
     } else {
-      manage_channels = ''
+      var manage_channels = 'No'
     }
     if (message.member.permissions.has("VIEW_AUDIT_LOG")) {
-      audit = 'You have the permission to view the audit log. '
+      var audit = 'Yes'
     } else {
-      audit = ''
+      var audit = 'No'
     }
     if (message.member.permissions.has("MANAGE_MESSAGES")) {
-      manage_messages = 'You have the permission to manage messages. '
+      var manage_messages = 'Yes'
     } else {
-      manage_messages = ''
+      var manage_messages = 'No'
     }
     if (message.member.permissions.has("DEAFEN_MEMBERS")) {
-      deafen = 'You have the permission to deafen members. '
+      var deafen = 'Yes'
     } else {
-      deafen = ''
+      var deafen = 'No'
     }
     if (message.member.permissions.has("MOVE_MEMBERS")) {
-      move = 'You have the permission to move members. '
+      var move = 'Yes'
     } else {
-      move = ''
+      var move = 'No'
     }
 
 
