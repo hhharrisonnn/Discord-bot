@@ -26,5 +26,5 @@ module.exports = async (Discord, client, message) => {
 
   const command = client.commands.get(cmd) || client.commands.find(a => a.aliases && a.aliases.includes(cmd));
 
-  if(command) command.execute(message, args, cmd, client, Discord);
+  if(command) command.execute(message, args, cmd, client, Discord, profileData);
 }
