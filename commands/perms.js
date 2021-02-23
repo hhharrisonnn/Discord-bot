@@ -43,6 +43,24 @@ module.exports = {
     } else {
       move = ''
     }
-    message.channel.send(admin + kick + ban + manage_channels + audit + manage_messages + deafen + move);
+
+
+    //embed for perms
+    const permsEmbed = new Discord.MessageEmbed()
+    .setColor('#304281')
+    .setTitle('Perms')
+    .addFields(
+      {name: 'Admin', value: `${admin}`},
+      {name: 'Kick members', value: `${kick}`},
+      {name: 'Ban members', value: `${ban}`},
+      {name: 'Manage channels', value: `${manage_channels}`},
+      {name: 'View audit log', value: `${audit}`},
+      {name: 'Manage messages', value: `${manage_messages}`},
+      {name: 'Deafen memebers', value: `${deafen}`},
+      {name: 'Move members', value: `${move}`},
+    ) 
+    .setFooter('Bot made by Harrison for the K4 boys :)')
+
+    message.channel.send(permsEmbed)
   }
 }
