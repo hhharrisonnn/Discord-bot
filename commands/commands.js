@@ -17,7 +17,6 @@ module.exports = {
       {name: 'Purge (for admins only, you cannot delete messages that are older than 14 days).', value: '$purge [number]'},
       {name: 'Look at your own avatar/profile pic', value: '$avatar, $profilepic, $pfp, $icon'},
       {name: 'Weather', value: '$weather [location]'},
-      {name: 'Test (for K4 only)', value: '$test'},
     ) 
     .setImage('https://i.imgur.com/ZXZMa3f.png')
     .setFooter('Bot made by Harrison for the K4 boys :)')
