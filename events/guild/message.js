@@ -29,7 +29,7 @@ module.exports = async (Discord, client, message) => {
   try {
     command.execute(message, args, cmd, client, Discord, profileData);
   } catch(err) {
-    message.reply("There was an error executing this command.");
+    message.reply("I do not recognise this command. Learn to spell or something dumbass.");
     console.log(err);
   }
 };
