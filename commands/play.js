@@ -92,14 +92,14 @@ const video_player = async (guild, song) => {
     song_queue.songs.shift();
     video_player(guild, song_queue.songs[0]);
   });
-  var newEmbed = new Discord.MessageEmbed()
+  var newEmbed2 = new Discord.MessageEmbed()
   .setColor('#304281')
   .setTitle('Music :notes:')
   .addFields(
     {name: 'Now playing:', value: `:play_pause: **${song.title}** 🎶`},
   )
   .setFooter('Bot made by Harrison for the K4 boys :)')
-  await song_queue.text_channel.send(newEmbed)
+  await song_queue.text_channel.send(newEmbed2)
   
 }
 
