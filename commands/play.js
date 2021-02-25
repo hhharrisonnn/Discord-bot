@@ -62,7 +62,14 @@ module.exports = {
         }
       } else {
         server_queue.songs.push(song);
-        return message.channel.send(`👍 **${song.title}** has been added to queue!`);
+        var newEmbed = new Discord.MessageEmbed()
+        .setColor('#304281')
+        .setTitle('Music')
+        .addFields(
+          {name: 'Queued:', value: `👍 **${song.title}**`},
+        )
+        .setFooter('Bot made by Harrison for the K4 boys :)')
+        message.channel.send(newEmbed)
       }
     }
 

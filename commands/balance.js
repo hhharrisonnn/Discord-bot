@@ -9,7 +9,7 @@ module.exports = {
   //embed
   const newEmbed = new Discord.MessageEmbed()
   .setColor('#304281')
-  .setTitle('Commands')
+  .setTitle(':moneybag:')
   .addFields(
     {name: 'Balance:', value: `${profileData.coins}`},
     {name: 'Bank:', value: `${profileData.bank}`},
