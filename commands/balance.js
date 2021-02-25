@@ -5,7 +5,6 @@ module.exports = {
   execute(message, args, cmd, client, Discord, profileData) {
     let balance = profileData.coins;
     let bank = profileData.bank;
-    message.channel.send(`Your wallet balance is: ${profileData.coins}, your bank balance is: ${profileData.bank}`); 
 
   //embed
   const newEmbed = new Discord.MessageEmbed()
