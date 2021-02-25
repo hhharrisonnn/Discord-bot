@@ -64,12 +64,12 @@ module.exports = {
         server_queue.songs.push(song);
         var newEmbed = new Discord.MessageEmbed()
         .setColor('#304281')
-        .setTitle('Music')
+        .setTitle('Music :notes:')
         .addFields(
           {name: 'Queued:', value: `👍 **${song.title}**`},
         )
         .setFooter('Bot made by Harrison for the K4 boys :)')
-        message.channel.send(newEmbed)
+        return message.channel.send(newEmbed)
       }
     }
 
@@ -93,6 +93,7 @@ const video_player = async (guild, song) => {
     video_player(guild, song_queue.songs[0]);
   });
   await song_queue.text_channel.send(`:play_pause: Now playing **${song.title}** 🎶`);
+  
 }
 
 const skip_song = (message, server_queue) => {
