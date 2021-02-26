@@ -5,7 +5,7 @@ const queue = new Map();
 
 module.exports = {
   name: 'play',
-  aliases: ['p', 'skip', 'leave'],
+  aliases: ['p', 'skip', 'leave', 'pause', 'unpause'],
   description: 'music bot',
   async execute(message, args, cmd, client, Discord) {
 
@@ -75,6 +75,8 @@ module.exports = {
 
     else if (cmd === 'skip') skip_song(message, server_queue);
     else if (cmd === 'leave') stop_song(message, server_queue);
+    else if (cmd === 'pause') pause_song(message, server_queue);
+    else if (cmd === 'unpause') unpause_song(message, server_queue);
   }
 }
 
@@ -108,4 +110,18 @@ const stop_song = (message, server_queue) => {
   server_queue.songs = [];
   server_queue.connection.dispatcher.end();
   message.channel.send('Leaving :sob:');
+}
+
+const pause_song = (message, server_queue) => {
+  if (!message.member.voice.channel) return message.channel.send('You need to be in a channel to execute this command.');
+  if(server_queue.connection.dispatcher.paused) return message.channel.send("Song is already paused!");
+  server_queue.connection.dispatcher.pause();
+  message.channel.send(":pause_button: Paused");
+}
+
+const unpause_song = (message, server_queue) => {
+  if (!message.member.voice.channel) return message.channel.send('You need to be in a channel to execute this command.');
+  if(!server_queue.connection.dispatcher.paused) return message.channel.send("Song isn't paused!");
+  server_queue.connection.dispatcher.resume();
+  message.channel.send(":play_pause: Unpaused");
 }
