@@ -9,8 +9,10 @@ module.exports = {
     .addFields(
       {name: 'Commands', value: '$commands, $c'},
       {name: 'Play music', value: '$play [keywords or URL]'},
-      {name: 'Skip music', value: '$skip'},
-      {name: 'Music bot leaves', value: '$leave'},
+      {name: 'Pause music', value: '$pause'},
+      {name: 'Unpause music', value: '$unpause'},
+      {name: 'Skip music', value: '$skip, $s'},
+      {name: 'Music bot leaves', value: '$leave, $l'},
       {name: 'Balance', value: '$balance, $bal, $b'},
       {name: 'Beg for coins (cringe)', value: '$beg'},
       {name: 'Check your permissions', value: '$perms'},

@@ -5,7 +5,7 @@ const queue = new Map();
 
 module.exports = {
   name: 'play',
-  aliases: ['p', 'skip', 'leave', 'pause', 'unpause'],
+  aliases: ['p', 'skip', 's', 'leave', 'l', 'pause', 'unpause'],
   description: 'music bot',
   async execute(message, args, cmd, client, Discord) {
 
@@ -73,8 +73,8 @@ module.exports = {
       }
     }
 
-    else if (cmd === 'skip') skip_song(message, server_queue);
-    else if (cmd === 'leave') stop_song(message, server_queue);
+    else if (cmd === 'skip' || 's') skip_song(message, server_queue);
+    else if (cmd === 'leave' || 'l') stop_song(message, server_queue);
     else if (cmd === 'pause') pause_song(message, server_queue);
     else if (cmd === 'unpause') unpause_song(message, server_queue);
   }
