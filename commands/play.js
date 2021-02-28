@@ -102,7 +102,7 @@ const video_player = async (guild, song) => {
   )
   .setFooter('Bot made by Harrison for the K4 boys :)')
   return message.channel.send(newEmbed2)
-
+  //huh
   //await song_queue.text_channel.send(`:play_pause: Now playing **${song.title}** 🎶`);
 }
 
