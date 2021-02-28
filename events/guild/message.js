@@ -1,4 +1,4 @@
-//require('dotenv').config();
+require('dotenv').config();
 const profileModel = require('../../models/profileSchema');
 
 module.exports = async (Discord, client, message) => {
