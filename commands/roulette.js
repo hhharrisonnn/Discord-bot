@@ -12,7 +12,7 @@ module.exports = {
       const randomNumber = Math.floor(Math.random() * 3);
       if (randomNumber == 1) {
         var win = amount * 2;
-        return message.channel.send(`You won ${amount} coins!`);
+        message.channel.send(`You won ${amount} coins!`);
       } else {
         var win = -amount;
       }
