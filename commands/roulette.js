@@ -9,10 +9,10 @@ module.exports = {
     if(amount % 1 != 0 || amount <= 0) return message.channel.send('Please enter a valid amount of coins to roulette.');
     try {
       if(amount > profileData.coins) return message.channel.send(`You don't have that amount of coins to roulette.`);
-      const randomNumber = Math.floor(Math.random() * 3);
+      const randomNumber = Math.floor(Math.random() * 2) + 1;
       if (randomNumber == 1) {
         var win = amount;
-        var total = win + profileData.coins;
+        var total = amount + profileData.coins;
         message.channel.send(`You **won** *${amount}* coins and now have *${total}* coins.`);
       } else {
         var win = -amount;
