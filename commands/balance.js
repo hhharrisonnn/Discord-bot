@@ -1,6 +1,7 @@
 module.exports = {
   name: 'balance',
   aliases: ['bal', 'b'],
+  permissions: [],
   description: 'check balance',
   execute(message, args, cmd, client, Discord, profileData) {
     let balance = profileData.coins;

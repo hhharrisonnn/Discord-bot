@@ -1,6 +1,7 @@
 const profileModel = require("../models/profileSchema");
 module.exports = {
   name: 'deposit',
+  permissions: [],
   aliases: ['dep'],
   description: 'deposit coins',
   async execute(message, args, cmd, client, Discord, profileData) {

@@ -2,6 +2,7 @@ const profileModel = require("../models/profileSchema");
 module.exports = {
   name: 'withdraw',
   aliases: ['wd'],
+  permissions: [],
   description: 'withdraw coins from your bank',
   async execute(message, args, cmd, client, Discord, profileData) {
     const amount = args[0];

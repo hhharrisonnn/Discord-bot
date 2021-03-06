@@ -4,6 +4,7 @@ const Discord = require('discord.js');
 
 module.exports = {
     name: 'weather',
+    permissions: [],
     async execute(message, args, cmd, client, Discord) {
     
         weather.find({search: args.join(" "), degreeType: 'C'}, function (error, result){

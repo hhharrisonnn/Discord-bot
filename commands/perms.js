@@ -1,5 +1,6 @@
 module.exports = {
   name: 'perms',
+  permissions: [],
   description: "this is a check permissions command.",
   execute(message, args, cmd, client, Discord) {
     
