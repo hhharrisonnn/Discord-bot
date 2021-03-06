@@ -10,7 +10,7 @@ module.exports = {
     try {
       if(amount > profileData.coins) return message.channel.send(`You don't have that amount of coins to roulette.`);
       const randomNumber = Math.floor(Math.random() * 2);
-      if (randomNumber = 1) {
+      if (randomNumber == 1) {
         var win = amount * 2;
         return message.channel.send(`You won ${amount} coins!`);
       } else {
