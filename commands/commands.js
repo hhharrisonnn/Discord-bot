@@ -14,6 +14,8 @@ module.exports = {
       {name: 'Skip music', value: '$skip, $s'},
       {name: 'Music bot leaves', value: '$leave, $l'},
       {name: 'Balance', value: '$balance, $bal, $b'},
+      {name: 'Deposit coins into bank', value: '$deposit, $dep'},
+      {name: 'Withdraw coins from bank', value: '$withdraw, $wd'},
       {name: 'Beg for coins (cringe)', value: '$beg'},
       {name: 'Check your permissions', value: '$perms'},
       {name: 'Purge (for admins only, you cannot delete messages that are older than 14 days).', value: '$purge [number]'},
