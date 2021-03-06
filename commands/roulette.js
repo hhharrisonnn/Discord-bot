@@ -11,13 +11,13 @@ module.exports = {
       if(amount > profileData.coins) return message.channel.send(`You don't have that amount of coins to roulette.`);
       const randomNumber = Math.floor(Math.random() * 3);
       if (randomNumber == 1) {
-        var win = amount * 2;
+        var win = amount;
         var total = win + profileData.coins;
-        message.channel.send(`You **won** ${amount} coins and now have ${total} coins.`);
+        message.channel.send(`You **won** *${amount}* coins and now have *${total}* coins.`);
       } else {
         var win = -amount;
         var total = profileData.coins - amount;
-        message.channel.send(`You **lost** ${amount} coins and now have ${total} coins.`);
+        message.channel.send(`You **lost** *${amount}* coins and now have *${total}* coins.`);
       }
       await profileModel.findOneAndUpdate({
         userID: message.author.id

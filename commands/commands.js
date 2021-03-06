@@ -14,6 +14,7 @@ module.exports = {
       {name: 'Unpause music', value: '$unpause'},
       {name: 'Skip music', value: '$skip, $s'},
       {name: 'Music bot leaves', value: '$leave, $l'},
+      {name: 'Roulette coins', value: '$roulette, $r'},
       {name: 'Balance', value: '$balance, $bal, $b'},
       {name: 'Deposit coins into bank', value: '$deposit, $dep'},
       {name: 'Withdraw coins from bank', value: '$withdraw, $wd'},
