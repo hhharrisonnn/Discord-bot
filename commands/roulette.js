@@ -5,7 +5,7 @@ module.exports = {
   permissions: [],
   description: 'roulette coins',
   async execute(message, args, cmd, client, Discord, profileData) {
-    const amount = args[0];
+    let amount = args[0];
     if(amount % 1 != 0 || amount <= 0) return message.channel.send('Please enter a valid amount of coins to roulette.');
     try {
       if(amount > profileData.coins) return message.channel.send(`You don't have that amount of coins to roulette.`);
