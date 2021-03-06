@@ -26,6 +26,55 @@ module.exports = async (Discord, client, message) => {
 
   const command = client.commands.get(cmd) || client.commands.find(a => a.aliases && a.aliases.includes(cmd));
 
+  const validPermissions = [
+    "ADMINISTRATOR",
+    "CREATE_INSTANT_INVITE",
+    "KICK_MEMBERS",
+    "BAN_MEMBERS",
+    "MANAGE_CHANNELS",
+    "MANAGE_GUILD",
+    "ADD_REACTIONS",
+    "VIEW_AUDIT_LOG",
+    "VIEW_CHANNEL",
+    "READ_MESSAGES",
+    "SEND_MESSAGES",
+    "SEND_TTS_MESSAGES",
+    "MANAGE_MESSAGES",
+    "EMBED_LINKS",
+    "ATTACH_FILES",
+    "READ_MESSAGE_HISTORY",
+    "MENTION_EVERYONE",
+    "USE_EXTERNAL_EMOJIS",
+    "EXTERNAL_EMOJIS",
+    "CONNECT",
+    "SPEAK",
+    "MUTE_MEMBERS",
+    "DEAFEN_MEMBERS",
+    "MOVE_MEMBERS",
+    "USE_VAD",
+    "CHANGE_NICKNAME",
+    "MANAGE_NICKNAMES",
+    "MANAGE_ROLES",
+    "MANAGE_ROLES_OR_PERMISSIONS",
+    "MANAGE_WEBHOOKS",
+    "MANAGE_EMOJIS",
+  ]
+
+  if (command.permissions.length) {
+    let invalidPerms = []
+    for(const perm of command.permissions) {
+      if (!validPermissions.includes(perm)) {
+        return console.log(`Invalid Permissions ${perm}`);
+      }
+      if(!message.member.hasPermission(perm)) {
+        invalidPerms.push(perm);
+      }
+    }
+    if (invalidPerms.length) {
+      return message.channel.send(`Missing permissions: \` ${invalidPerms}\``);
+    }
+  }
+
   try {
     command.execute(message, args, cmd, client, Discord, profileData);
   } catch(err) {
