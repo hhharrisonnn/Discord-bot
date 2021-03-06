@@ -1,3 +1,4 @@
+const profileModel = require("../models/profileSchema");
 module.exports = {
   name: 'withdraw',
   aliases: ['wd'],
