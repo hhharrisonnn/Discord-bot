@@ -12,11 +12,11 @@ module.exports = {
       const randomNumber = Math.floor(Math.random() * 2) + 1;
       if (randomNumber == 1) {
         var win = amount;
-        var total = amount + profileData.coins;
+        var total = Number(profileData.coins) + amount;
         message.channel.send(`You **won** *${amount}* coins and now have *${total}* coins.`);
       } else {
         var win = -amount;
-        var total = profileData.coins - amount;
+        var total = Number(profileData.coins) - amount;
         message.channel.send(`You **lost** *${amount}* coins and now have *${total}* coins.`);
       }
       await profileModel.findOneAndUpdate({
