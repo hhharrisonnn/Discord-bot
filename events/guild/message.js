@@ -1,5 +1,6 @@
 //require('dotenv').config();
 const profileModel = require('../../models/profileSchema');
+const cooldowns = new Map();
 
 module.exports = async (Discord, client, message) => {
   const prefix = process.env.PREFIX;
@@ -74,6 +75,25 @@ module.exports = async (Discord, client, message) => {
       return message.channel.send(`Missing Permissions: \` ${invalidPerms}\``);
     }
   }
+
+  if (!cooldowns.has(command.name)) {
+    cooldowns.set(command.name, new Discord.Collection());
+  }
+
+  const currentTime = Date.now();
+  const timeStamps = cooldowns.get(command.name);
+  const cooldownAmount = (command.cooldown) * 1000;
+
+  if (timeStamps.has(message.author.id)) {
+    const expirationTime = timeStamps.get(message.author.id) + cooldownAmount;
+    if (currentTime < expirationTime) {
+      const timeLeft = (expirationTime - currentTime) / 1000;
+      return message.reply(`You have to wait ${timeLeft.toFixed(1)} more seconds until you can use this command again.`);
+    }
+  }
+
+  timeStamps.set(message.author.id, currentTime);
+  setTimeout(() => timeStamps.delete(message.author.id), cooldownAmount);
 
   try {
     command.execute(message, args, cmd, client, Discord, profileData);
