@@ -1,7 +1,7 @@
 module.exports = {
   name: 'commands',
   permissions: [],
-  aliases: ['c'],
+  aliases: ['c', 'help'],
   cooldown: 300,
   description: "Embeds.",
   execute(message, args, cmd, client, Discord) {
@@ -9,7 +9,7 @@ module.exports = {
     .setColor('#304281')
     .setTitle('Commands')
     .addFields(
-      {name: 'Commands', value: '$commands, $c'},
+      {name: 'Commands', value: '$commands, $c, $help'},
       {name: 'Play music', value: '$play [keywords or URL]'},
       {name: 'Pause music', value: '$pause'},
       {name: 'Unpause music', value: '$unpause'},
@@ -17,7 +17,7 @@ module.exports = {
       {name: 'Music bot leaves', value: '$leave, $l'},
       {name: 'Roulette coins', value: '$roulette, $r'},
       {name: 'Balance', value: '$balance, $bal, $b'},
-      {name: 'Deposit coins into bank, 1 day cooldown', value: '$deposit, $dep'},
+      {name: 'Deposit coins, 1 day cooldown', value: '$deposit, $dep'},
       {name: 'Withdraw coins from bank', value: '$withdraw, $wd'},
       {name: 'Beg for coins (cringe), 1 hour cooldown', value: '$beg'},
       {name: 'Check your permissions', value: '$perms'},

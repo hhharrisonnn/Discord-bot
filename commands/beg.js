@@ -5,7 +5,7 @@ module.exports = {
   cooldown: 3600,
   description: 'begs for coins (yikes)',
   async execute(message, args, cmd, client, Discord, profileData) {
-    const randomNumber = Math.floor(Math.random()*500) + 1;
+    const randomNumber = Math.floor(Math.random() * 500) + 1;
     const response = await profileModel.findOneAndUpdate(
       {
       userID: message.author.id,
