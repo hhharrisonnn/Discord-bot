@@ -3,6 +3,7 @@ module.exports = {
   name: 'roulette',
   aliases: ['r'],
   permissions: [],
+  cooldown: 0,
   description: 'roulette coins',
   async execute(message, args, cmd, client, Discord, profileData) {
     let amount = args[0];

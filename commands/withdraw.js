@@ -3,6 +3,7 @@ module.exports = {
   name: 'withdraw',
   aliases: ['wd'],
   permissions: [],
+  cooldown: 0,
   description: 'withdraw coins from your bank',
   async execute(message, args, cmd, client, Discord, profileData) {
     const amount = args[0];
@@ -19,7 +20,7 @@ module.exports = {
         },
       });
   
-      return message.channel.send(`You withdrew ${amount} coins from your bank.`)
+      return message.channel.send(`You withdrew *${amount}* coins from your bank.`)
 
     }catch(err) {
       console.log(err)

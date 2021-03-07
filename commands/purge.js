@@ -1,6 +1,7 @@
 module.exports = {
   name: 'purge',
   permissions: ["ADMINISTRATOR"],
+  cooldown: 0,
   description: "purge messages",
 
  async  execute(message, args, cmd, client, Discord) {
