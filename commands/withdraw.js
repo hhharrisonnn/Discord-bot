@@ -8,7 +8,7 @@ module.exports = {
   async execute(message, args, cmd, client, Discord, profileData) {
     let amount = args[0];
     if(amount.toLowerCase() == "all") {
-      amount = profileData.coins
+      amount = profileData.bank
     }
     if(amount % 1 != 0 || amount <= 0) {
       return message.channel.send('Please enter a valid amount of coins to withdraw.')
