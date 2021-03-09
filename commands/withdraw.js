@@ -6,7 +6,7 @@ module.exports = {
   cooldown: 0,
   description: 'withdraw coins from your bank',
   async execute(message, args, cmd, client, Discord, profileData) {
-    const amount = args[0];
+    let amount = args[0];
     if(amount.toLowerCase() == "all") {
       amount = profileData.coins
     }
