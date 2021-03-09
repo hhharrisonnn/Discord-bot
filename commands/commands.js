@@ -1,15 +1,15 @@
 module.exports = {
   name: 'commands',
   permissions: [],
-  aliases: ['c', 'help'],
+  aliases: ['c', 'help', 'h'],
   cooldown: 300,
   description: "Embeds.",
   execute(message, args, cmd, client, Discord) {
     const newEmbed = new Discord.MessageEmbed()
     .setColor('#304281')
-    .setTitle('Commands')
+    .setTitle('K4 Bot Help')
     .addFields(
-      {name: 'Commands', value: '$commands, $c, $help'},
+      {name: 'Commands', value: '$help, $h, $commands, $c'},
       {name: 'Play music', value: '$play [keywords or URL]'},
       {name: 'Pause music', value: '$pause'},
       {name: 'Unpause music', value: '$unpause'},
