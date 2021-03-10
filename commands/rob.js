@@ -15,7 +15,7 @@ module.exports = {
     try {
       const targetData = await profileData.findOne({ userID: target.id });
       if(!targetData) return message.channel.send('This person does not exist.')
-      let robbed = target.coins * randomNumber
+      let robbed = profileData.coins * randomNumber
       await profileModel.findOneAndUpdate({
         userID: target.id
       }, {
