@@ -1,7 +1,7 @@
 const profileModel = require("../models/profileSchema");
 module.exports = {
   name: 'withdraw',
-  aliases: ['wd'],
+  aliases: ['with', 'wd'],
   permissions: [],
   cooldown: 0,
   description: 'withdraw coins from your bank',
