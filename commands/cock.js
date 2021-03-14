@@ -1,0 +1,10 @@
+module.exports = {
+  name: 'cock',
+  permissions: [],
+  cooldown: 0,
+  description: "cock size",
+  execute(message, args) {
+    const cockSize = Math.floor(Math.random() * 10) + 1;
+    message.reply(`your cock is ${cockSize} inches long. oh yeahhhhhh`)
+  }
+}
