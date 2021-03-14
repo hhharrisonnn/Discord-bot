@@ -4,7 +4,7 @@ module.exports = {
   cooldown: 0,
   description: "cock size",
   execute(message, args) {
-    const cockSize = Math.floor(Math.random() * 10) + 1;
+    const cockSize = Math.floor(Math.random() * 15) + 1;
     message.reply(`your cock is ${cockSize} inches long. oh yeahhhhhh`)
   }
 }
